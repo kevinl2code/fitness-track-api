@@ -7,6 +7,7 @@ import {
 import { v4 } from 'uuid'
 import { DailyEntry } from '../Shared/Model'
 
+const TABLE_NAME = process.env.TABLE_NAME
 const dbClient = new DynamoDB.DocumentClient()
 
 async function handler(
@@ -18,18 +19,24 @@ async function handler(
     body: 'Hello from dynamo',
   }
 
-  const item: DailyEntry = {
-    dailyEntryId: v4(),
-    date: new Date(),
-    weight: 200,
-    meals: [],
-    activityLevel: 'SEDENTARY',
-  }
+  const item =
+    typeof event.body == 'object' ? event.body : JSON.parse(event.body)
+  item.dailyEntryId = v4()
+
+  // const item: DailyEntry = {
+  //   dailyEntryId: v4(),
+  //   date: new Date(),
+  //   weight: 200,
+  //   meals: [],
+  //   activityLevel: 'SEDENTARY',
+  // }
+
+  //NEED TO ADD VALIDATION THAT ITEM IS OF TYPE DAILYENTRY BEFORE WRITING IT TO DYNAMODB
 
   try {
     await dbClient
       .put({
-        TableName: 'DailyEntriesTable',
+        TableName: TABLE_NAME!,
         Item: item,
       })
       .promise()
@@ -38,7 +45,7 @@ async function handler(
       result.body = error.message
     }
   }
-
+  result.body = JSON.stringify(`created item ${item.dailyEntryId}`)
   return result
 }
 

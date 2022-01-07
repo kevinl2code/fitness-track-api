@@ -1,0 +1,17 @@
+@endpoint  = https://qe5ybxphyl.execute-api.us-east-2.amazonaws.com/prod
+
+
+GET {{endpoint}}/dailyentries/  
+
+GET {{endpoint}}/dailyentries?dailyEntryId=gredhdehted
+
+
+POST {{endpoint}}/dailyentries/
+Content-Type: application/json
+
+{
+  "date": "01/07/2022",
+  "weight": "123",
+  "meals": [],
+  "activityLevel": "VERY_ACTIVE"
+}

@@ -2,23 +2,29 @@ import { Stack, StackProps } from 'aws-cdk-lib'
 import { RestApi } from 'aws-cdk-lib/aws-apigateway'
 import { Construct } from 'constructs'
 import { GenericTable } from './GenericTable'
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class FitnessTrackApiStack extends Stack {
-  // private api = new RestApi(this, 'FitnessTrackApi')
+  private api = new RestApi(this, 'FitnessTrackApi')
   private dailyEntriesTable = new GenericTable(this, {
     tableName: 'DailyEntriesTable',
     primaryKey: 'dailyEntryId',
+    createLambdaPath: 'Create',
+    readLambdaPath: 'Read',
+    secondaryIndexes: ['date', 'activityLevel'],
   })
 
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
 
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'FitnessTrackApiQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    //DailyEntries API integrations
+    const dailyEntryResource = this.api.root.addResource('dailyentries')
+    dailyEntryResource.addMethod(
+      'POST',
+      this.dailyEntriesTable.createLambdaIntegration
+    )
+    dailyEntryResource.addMethod(
+      'GET',
+      this.dailyEntriesTable.readLambdaIntegration
+    )
   }
 }
