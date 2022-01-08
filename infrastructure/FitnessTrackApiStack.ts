@@ -10,7 +10,7 @@ export class FitnessTrackApiStack extends Stack {
     primaryKey: 'dailyEntryId',
     createLambdaPath: 'Create',
     readLambdaPath: 'Read',
-    secondaryIndexes: ['date', 'activityLevel'],
+    secondaryIndexes: ['date'],
   })
 
   constructor(scope: Construct, id: string, props?: StackProps) {

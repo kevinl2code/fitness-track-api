@@ -12,7 +12,7 @@ import { handler } from '../../services/DailyEntriesTable/Read'
 
 const event: APIGatewayProxyEvent = {
   queryStringParameters: {
-    activityLevel: 'LIGHTLY_ACTIVE',
+    date: '01/31/2021',
   },
 } as any
 

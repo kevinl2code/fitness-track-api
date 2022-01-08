@@ -2,16 +2,19 @@
 
 
 GET {{endpoint}}/dailyentries/  
+###
 
 GET {{endpoint}}/dailyentries?dailyEntryId=gredhdehted
+###
 
 
 POST {{endpoint}}/dailyentries/
 Content-Type: application/json
 
 {
-  "date": "01/07/2022",
+  "date": "01/31/2021",
   "weight": "123",
   "meals": [],
   "activityLevel": "VERY_ACTIVE"
 }
+###
