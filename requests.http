@@ -4,9 +4,29 @@
 GET {{endpoint}}/dailyentries/  
 ###
 
-GET {{endpoint}}/dailyentries?dailyEntryId=gredhdehted
+GET {{endpoint}}/dailyentries?dailyEntryId=42074cad-642f-411c-aee6-30691d08e6ef
+###
+GET {{endpoint}}/dailyentries?date=01/31/2021
 ###
 
+PUT {{endpoint}}/dailyentries?dailyEntryId=81931f22-3968-4dea-af3f-6c48ed279187
+Content-Type: application/json
+
+{  "meals": [{
+  "calories": "600",
+  "protein": "60"
+}]}
+
+# {
+#   "date": "01/31/2021",
+#   "weight": "123",
+#   "meals": [{
+#   "calories": "600",
+#   "protein": "60"
+# }],
+#   "activityLevel": "VERY_ACTIVE"
+# }
+###
 
 POST {{endpoint}}/dailyentries/
 Content-Type: application/json
@@ -17,4 +37,7 @@ Content-Type: application/json
   "meals": [],
   "activityLevel": "VERY_ACTIVE"
 }
+###
+
+DELETE {{endpoint}}/dailyentries?dailyEntryId=81931f22-3968-4dea-af3f-6c48ed279187
 ###

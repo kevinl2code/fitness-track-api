@@ -10,6 +10,8 @@ export class FitnessTrackApiStack extends Stack {
     primaryKey: 'dailyEntryId',
     createLambdaPath: 'Create',
     readLambdaPath: 'Read',
+    updateLambdaPath: 'Update',
+    deleteLambdaPath: 'Delete',
     secondaryIndexes: ['date'],
   })
 
@@ -25,6 +27,14 @@ export class FitnessTrackApiStack extends Stack {
     dailyEntryResource.addMethod(
       'GET',
       this.dailyEntriesTable.readLambdaIntegration
+    )
+    dailyEntryResource.addMethod(
+      'PUT',
+      this.dailyEntriesTable.updateLambdaIntegration
+    )
+    dailyEntryResource.addMethod(
+      'DELETE',
+      this.dailyEntriesTable.deleteLambdaIntegration
     )
   }
 }
