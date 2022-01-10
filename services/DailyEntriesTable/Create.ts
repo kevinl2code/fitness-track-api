@@ -6,6 +6,7 @@ import {
 } from 'aws-lambda'
 import { v4 } from 'uuid'
 import { DailyEntry } from '../Shared/Model'
+import { addCorsHeader } from '../Shared/Utils'
 
 const TABLE_NAME = process.env.TABLE_NAME
 const dbClient = new DynamoDB.DocumentClient()
@@ -18,6 +19,7 @@ async function handler(
     statusCode: 200,
     body: 'Hello from dynamo',
   }
+  addCorsHeader(result)
 
   const item =
     typeof event.body == 'object' ? event.body : JSON.parse(event.body)

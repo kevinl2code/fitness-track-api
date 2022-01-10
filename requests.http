@@ -9,13 +9,24 @@ GET {{endpoint}}/dailyentries?dailyEntryId=42074cad-642f-411c-aee6-30691d08e6ef
 GET {{endpoint}}/dailyentries?date=01/31/2021
 ###
 
-PUT {{endpoint}}/dailyentries?dailyEntryId=81931f22-3968-4dea-af3f-6c48ed279187
+PUT {{endpoint}}/dailyentries?dailyEntryId=42074cad-642f-411c-aee6-30691d08e6ef
 Content-Type: application/json
 
 {  "meals": [{
-  "calories": "600",
-  "protein": "60"
-}]}
+    "name": "Hamburger",
+    "calories": 350,
+    "protein": 12
+  },
+  {
+    "name": "Apple",
+    "calories": 80,
+    "protein": 2
+  },
+  {
+    "name": "Ice Tea",
+    "calories": 130,
+    "protein": 1
+  }] }
 
 # {
 #   "date": "01/31/2021",
@@ -32,10 +43,24 @@ POST {{endpoint}}/dailyentries/
 Content-Type: application/json
 
 {
-  "date": "01/31/2021",
-  "weight": "123",
-  "meals": [],
-  "activityLevel": "VERY_ACTIVE"
+  "date": "1/9/2022",
+  "weight": "683",
+  "meals": [{
+    "name": "Whole Pizza",
+    "calories": 1500,
+    "protein": 80
+  },
+  {
+    "name": "Gallon of Ranch",
+    "calories": 3000,
+    "protein": 10
+  },
+  {
+    "name": "Diet Coke",
+    "calories": 0,
+    "protein": 0
+  }],
+  "activityLevel": "LIGHTLY_ACTIVE"
 }
 ###
 
