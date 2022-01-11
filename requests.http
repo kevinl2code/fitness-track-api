@@ -9,7 +9,7 @@ GET {{endpoint}}/dailyentries?dailyEntryId=42074cad-642f-411c-aee6-30691d08e6ef
 GET {{endpoint}}/dailyentries?date=01/31/2021
 ###
 
-PUT {{endpoint}}/dailyentries?dailyEntryId=42074cad-642f-411c-aee6-30691d08e6ef
+PUT {{endpoint}}/dailyentries?dailyEntryId=d6e6c7a2-ac76-47c2-97ae-9b7fc34530db
 Content-Type: application/json
 
 {  "meals": [{
