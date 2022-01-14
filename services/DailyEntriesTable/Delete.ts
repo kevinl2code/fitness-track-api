@@ -20,14 +20,14 @@ async function handler(
   }
   addCorsHeader(result)
 
-  const spaceId = event.queryStringParameters?.[PRIMARY_KEY]
+  const dailyEntryId = event.queryStringParameters?.[PRIMARY_KEY]
 
-  if (spaceId) {
+  if (dailyEntryId) {
     const deleteResult = await dbClient
       .delete({
         TableName: TABLE_NAME,
         Key: {
-          [PRIMARY_KEY]: spaceId,
+          [PRIMARY_KEY]: dailyEntryId,
         },
       })
       .promise()

@@ -21,9 +21,9 @@ async function handler(
   addCorsHeader(result)
 
   const requestBody = getEventBody(event)
-  const spaceId = event.queryStringParameters?.[PRIMARY_KEY]
+  const dailyEntryId = event.queryStringParameters?.[PRIMARY_KEY]
 
-  if (requestBody && spaceId) {
+  if (requestBody && dailyEntryId) {
     const requestBodyKey = Object.keys(requestBody)[0]
     const requestBodyValue = requestBody[requestBodyKey]
 
@@ -31,7 +31,7 @@ async function handler(
       .update({
         TableName: TABLE_NAME,
         Key: {
-          [PRIMARY_KEY]: spaceId,
+          [PRIMARY_KEY]: dailyEntryId,
         },
         UpdateExpression: 'set #zzzNew = :new',
         ExpressionAttributeValues: {
