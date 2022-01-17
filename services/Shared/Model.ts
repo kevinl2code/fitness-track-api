@@ -13,6 +13,7 @@ export type ActivityLevel =
 
 export interface DailyEntry {
   dailyEntryId: string
+  // sub: string
   date: string
   weight: number
   meals: Meal[] | []

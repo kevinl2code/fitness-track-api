@@ -50,19 +50,23 @@ export class FitnessTrackApiStack extends Stack {
     )
     dailyEntryResource.addMethod(
       'POST',
-      this.dailyEntriesTable.createLambdaIntegration
+      this.dailyEntriesTable.createLambdaIntegration,
+      optionsWithAuthorizer
     )
     dailyEntryResource.addMethod(
       'GET',
-      this.dailyEntriesTable.readLambdaIntegration
+      this.dailyEntriesTable.readLambdaIntegration,
+      optionsWithAuthorizer
     )
     dailyEntryResource.addMethod(
       'PUT',
-      this.dailyEntriesTable.updateLambdaIntegration
+      this.dailyEntriesTable.updateLambdaIntegration,
+      optionsWithAuthorizer
     )
     dailyEntryResource.addMethod(
       'DELETE',
-      this.dailyEntriesTable.deleteLambdaIntegration
+      this.dailyEntriesTable.deleteLambdaIntegration,
+      optionsWithAuthorizer
     )
   }
 }
