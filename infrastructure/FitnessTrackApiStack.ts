@@ -51,23 +51,23 @@ export class FitnessTrackApiStack extends Stack {
     )
     fitnessTrackUsersResource.addMethod(
       'POST',
-      this.fitnessTrackUsersTable.createLambdaIntegration
-      // optionsWithAuthorizer
+      this.fitnessTrackUsersTable.createLambdaIntegration,
+      optionsWithAuthorizer
     )
     fitnessTrackUsersResource.addMethod(
       'GET',
-      this.fitnessTrackUsersTable.readLambdaIntegration
-      // optionsWithAuthorizer
+      this.fitnessTrackUsersTable.readLambdaIntegration,
+      optionsWithAuthorizer
     )
     fitnessTrackUsersResource.addMethod(
       'PUT',
-      this.fitnessTrackUsersTable.updateLambdaIntegration
-      // optionsWithAuthorizer
+      this.fitnessTrackUsersTable.updateLambdaIntegration,
+      optionsWithAuthorizer
     )
     fitnessTrackUsersResource.addMethod(
       'DELETE',
-      this.fitnessTrackUsersTable.deleteLambdaIntegration
-      // optionsWithAuthorizer
+      this.fitnessTrackUsersTable.deleteLambdaIntegration,
+      optionsWithAuthorizer
     )
   }
 }
