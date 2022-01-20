@@ -1,18 +1,18 @@
-@endpoint  = https://qe5ybxphyl.execute-api.us-east-2.amazonaws.com/prod
-@token = eyJraWQiOiJuV2hcL3hxM1hUZWtZd3d5TjlNWnpKb3VPXC9ydVNnMEM0NStnZzd5YTlNRlU9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJiZTEwNGFlNi02NzcwLTQ2YzktOWU1YS04NDc0YWRjOTI0ZTYiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfSDlxUXBkMGxrIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3R1c2VyMSIsIm9yaWdpbl9qdGkiOiI4MDg2NGM2OC01ZjhlLTRiNDItODY2My00NDExYTRhZGQ3YjYiLCJhdWQiOiIxanU1Y3U5ZHZzazM2bzJrbXBxNWNmNzZsNyIsImV2ZW50X2lkIjoiNGVjNTI4MGItNWQ2Yy00NGM5LTg1ZGYtN2JkNjc3NjRjMGU2IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NDIxMDA3OTEsImV4cCI6MTY0MjEwNDM5MSwiaWF0IjoxNjQyMTAwNzkxLCJqdGkiOiJjODE2YTA3Yi1mMTYzLTQwOTAtYjViMC04YzJkMjY2M2I4YjkiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20ifQ.jlAoFlu-kJTicPeEZWWw03qMcepKSZwARz8pm8I9G2EWKueY6t1FZY1SGeE4IPmz6g5Azzyj2pb2tdPn3gD2SnS38YwDGBPbjskw_Kfbvb_VNDUGGZCGmITk0CoUa7e9u7bVWy-PTP2XVdXNYXfjvHR_zKOMoN-FpwH-8PhjEeFzs4gl3b1XF8HGjYFHOnO_DFCIP2zdtXbAzo3axhE49f80Q0mUjwQHevebQ5j-qgxwLQzeA9KNz7XkYOffgS4ojqT5WtXyKOz9PTA6zecTjecxzeBibvto1EqWBiij8FKUpo7AOxyI1dSYlu0NQE13sc--bFKwVF_xRpi3Giqnsg
+@endpoint  = https://y8y1qedj8b.execute-api.us-east-2.amazonaws.com/prod
+@token = eyJraWQiOiJtSGFcL2loZzNIUE9ZSVlDQmtjM1NvYlhPWjRzbEdValIraWdsWWRXQkhZdz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIwODcyMjMyNy1kMzg2LTQ5MjMtYjYxNi1iOWY3YTIwMzA1MmMiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1ZWbXZtVUZUQiIsImNvZ25pdG86dXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJvcmlnaW5fanRpIjoiYThlMGY5NmQtN2ExOS00NjFkLWE3ODAtZDBjM2Q1NTY4MzBmIiwiY29nbml0bzpyb2xlcyI6WyJhcm46YXdzOmlhbTo6MjQxNDg5NTgzMTg3OnJvbGVcL0ZpdG5lc3NUcmFjay1Db2duaXRvQWRtaW5Sb2xlNEMxMEZCQTQtOEtYTUIxV0U2SzE4Il0sImF1ZCI6IjZwOGdnZjlqZWV0M2NraGU0ZHEyN2hsOXU4IiwiZXZlbnRfaWQiOiIxNTA0MjFhZi0xMWUyLTRjNDEtODJjMy1jYzc4ZjhkZWUxNmQiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY0MjYxMjU3NiwiZXhwIjoxNjQyNjE2MTc2LCJpYXQiOjE2NDI2MTI1NzYsImp0aSI6ImYyYjk3MmIxLWRhNTQtNGNkMi05MDljLTZmZmZiYTdmNzBmMSIsImVtYWlsIjoiaGlnaGlAZmdoamkuY29tIn0.NC3hPLV7L9fzG447TXCUTAYGUN3Z-Tj7GcXx7Hv5KVUWppw_eSJKoroOu-Cj37qP3WWXuX1Hph9ZOgE37lrvM1pYBrBFGM-I8iMqCOxee6ADZMLGbnRhKlQUGSTnukU6R36ATCmUYCcujOXdWAbHU_PJViDeLd1aDbVbBeUgZVbN96o5CNZv1QBbEkXnkEq1my12yM7ygtiTZ-Jrd4S2730eofCn3uxmmnDRtsK69FG5_Txj10NTdlqsm2cOhildrfBLOKTTR5NBB1HtNJbyYDvjbcU1EuMW42qcEabLUIF74lZUtCeztFBXiyp37z8ASb0cGJuEWNl8KBPU950r6Q
 
 GET {{endpoint}}/dailyentries/  
 ###
 
-GET {{endpoint}}/dailyentries?dailyEntryId=42074cad-642f-411c-aee6-30691d08e6ef
+GET {{endpoint}}/dailyentries?userId=d92bfee4-1ac2-4996-9961-4c531cab132f
 ###
 GET {{endpoint}}/dailyentries?date=01/31/2021
 ###
 
-PUT {{endpoint}}/dailyentries?dailyEntryId=d6e6c7a2-ac76-47c2-97ae-9b7fc34530db
+PUT {{endpoint}}/dailyentries?userId=d92bfee4-1ac2-4996-9961-4c531cab132f&sortKey=20220119
 Content-Type: application/json
 
-{  "meals": [{
+{  "dailyEntryMeals": [{
     "name": "Hamburger",
     "calories": 350,
     "protein": 12
@@ -40,27 +40,12 @@ Content-Type: application/json
 ###
 
 POST {{endpoint}}/dailyentries/
+Authorization: {{token}}
 Content-Type: application/json
 
 {
-  "date": "1/9/2022",
-  "weight": "683",
-  "meals": [{
-    "name": "Whole Pizza",
-    "calories": 1500,
-    "protein": 80
-  },
-  {
-    "name": "Gallon of Ranch",
-    "calories": 3000,
-    "protein": 10
-  },
-  {
-    "name": "Diet Coke",
-    "calories": 0,
-    "protein": 0
-  }],
-  "activityLevel": "LIGHTLY_ACTIVE"
+  "userId": "abcdeflgjkiorehgrioeuood",
+  "sortKey": "20220110",
 }
 ###
 

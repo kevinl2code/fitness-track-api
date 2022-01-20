@@ -9,6 +9,7 @@ import { addCorsHeader } from '../Shared/Utils'
 
 const TABLE_NAME = process.env.TABLE_NAME
 const PRIMARY_KEY = process.env.PRIMARY_KEY
+const SORT_KEY = process.env.SORT_KEY
 const dbClient = new DynamoDB.DocumentClient()
 
 async function handler(
@@ -23,7 +24,14 @@ async function handler(
 
   try {
     if (event.queryStringParameters) {
-      if (PRIMARY_KEY! in event.queryStringParameters) {
+      if (
+        PRIMARY_KEY! in event.queryStringParameters &&
+        SORT_KEY! in event.queryStringParameters
+      ) {
+        result.body = await queryWithPrimaryPartitionAndSortKey(
+          event.queryStringParameters
+        )
+      } else if (PRIMARY_KEY! in event.queryStringParameters) {
         result.body = await queryWithPrimaryPartition(
           event.queryStringParameters
         )
@@ -69,6 +77,7 @@ async function queryWithPrimaryPartition(
   queryParams: APIGatewayProxyEventQueryStringParameters
 ) {
   const keyValue = queryParams[PRIMARY_KEY!]
+  const sortKeyValue = queryParams[SORT_KEY!]
   const queryResponse = await dbClient
     .query({
       TableName: TABLE_NAME!,
@@ -84,6 +93,28 @@ async function queryWithPrimaryPartition(
   return JSON.stringify(queryResponse.Items)
 }
 
+async function queryWithPrimaryPartitionAndSortKey(
+  queryParams: APIGatewayProxyEventQueryStringParameters
+) {
+  const keyValue = queryParams[PRIMARY_KEY!]
+  const sortKeyValue = queryParams[SORT_KEY!]
+  const queryResponse = await dbClient
+    .query({
+      TableName: TABLE_NAME!,
+      KeyConditionExpression: '#zz = :zzzz and #yy = :yyyy',
+      ExpressionAttributeNames: {
+        '#zz': PRIMARY_KEY!,
+        '#yy': SORT_KEY!,
+      },
+      ExpressionAttributeValues: {
+        ':zzzz': keyValue,
+        ':yyyy': sortKeyValue,
+      },
+    })
+    .promise()
+  return JSON.stringify(queryResponse.Items)
+}
+
 async function scanTable() {
   const queryResponse = await dbClient
     .scan({
@@ -92,5 +123,7 @@ async function scanTable() {
     .promise()
   return JSON.stringify(queryResponse.Items)
 }
+
+// async function queryByU
 
 export { handler }

@@ -24,15 +24,16 @@ async function handler(
   try {
     const item =
       typeof event.body == 'object' ? event.body : JSON.parse(event.body)
-    item.dailyEntryId = v4()
-    validateAsDailyEntry(item)
+    console.log(item)
+    // item.dailyEntryId = v4()
+    // validateAsDailyEntry(item)
     await dbClient
       .put({
         TableName: TABLE_NAME!,
         Item: item,
       })
       .promise()
-    result.body = JSON.stringify(`created item ${item.dailyEntryId}`)
+    result.body = JSON.stringify(`created item`)
   } catch (error) {
     if (error instanceof Error) {
       result.body = error.message

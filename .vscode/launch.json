@@ -17,8 +17,9 @@
       ],
       "env": {
         "AWS_REGION": "us-east-2",
-        "TABLE_NAME": "DailyEntriesTable",
-        "PRIMARY_KEY": "dailyEntryId"
+        "TABLE_NAME": "FitnessTrackUsersTable",
+        "PRIMARY_KEY": "userId",
+        "SORT_KEY": "sortKey"
       }
     }
   ]

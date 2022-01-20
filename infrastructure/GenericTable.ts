@@ -7,6 +7,7 @@ import { join } from 'path'
 export interface TableProps {
   tableName: string
   primaryKey: string
+  sortKey: string
   createLambdaPath?: string
   readLambdaPath?: string
   updateLambdaPath?: string
@@ -48,7 +49,10 @@ export class GenericTable {
         name: this.props.primaryKey,
         type: AttributeType.STRING,
       },
-
+      sortKey: {
+        name: this.props.sortKey,
+        type: AttributeType.STRING,
+      },
       tableName: this.props.tableName,
     })
   }
@@ -116,6 +120,7 @@ export class GenericTable {
       environment: {
         TABLE_NAME: this.props.tableName,
         PRIMARY_KEY: this.props.primaryKey,
+        SORT_KEY: this.props.sortKey,
       },
     })
   }

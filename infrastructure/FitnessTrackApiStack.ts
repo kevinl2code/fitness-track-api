@@ -14,14 +14,15 @@ export class FitnessTrackApiStack extends Stack {
   private api = new RestApi(this, 'FitnessTrackApi')
   private authorizer: AuthorizerWrapper
 
-  private dailyEntriesTable = new GenericTable(this, {
-    tableName: 'DailyEntriesTable',
-    primaryKey: 'dailyEntryId',
+  private fitnessTrackUsersTable = new GenericTable(this, {
+    tableName: 'FitnessTrackUsersTable',
+    primaryKey: 'userId',
+    sortKey: 'sortKey',
     createLambdaPath: 'Create',
     readLambdaPath: 'Read',
     updateLambdaPath: 'Update',
     deleteLambdaPath: 'Delete',
-    secondaryIndexes: ['date'],
+    secondaryIndexes: [],
   })
 
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -44,29 +45,29 @@ export class FitnessTrackApiStack extends Stack {
     }
 
     //DailyEntries API integrations
-    const dailyEntryResource = this.api.root.addResource(
+    const fitnessTrackUsersResource = this.api.root.addResource(
       'dailyentries',
       optionsWithCors
     )
-    dailyEntryResource.addMethod(
+    fitnessTrackUsersResource.addMethod(
       'POST',
-      this.dailyEntriesTable.createLambdaIntegration,
-      optionsWithAuthorizer
+      this.fitnessTrackUsersTable.createLambdaIntegration
+      // optionsWithAuthorizer
     )
-    dailyEntryResource.addMethod(
+    fitnessTrackUsersResource.addMethod(
       'GET',
-      this.dailyEntriesTable.readLambdaIntegration,
-      optionsWithAuthorizer
+      this.fitnessTrackUsersTable.readLambdaIntegration
+      // optionsWithAuthorizer
     )
-    dailyEntryResource.addMethod(
+    fitnessTrackUsersResource.addMethod(
       'PUT',
-      this.dailyEntriesTable.updateLambdaIntegration,
-      optionsWithAuthorizer
+      this.fitnessTrackUsersTable.updateLambdaIntegration
+      // optionsWithAuthorizer
     )
-    dailyEntryResource.addMethod(
+    fitnessTrackUsersResource.addMethod(
       'DELETE',
-      this.dailyEntriesTable.deleteLambdaIntegration,
-      optionsWithAuthorizer
+      this.fitnessTrackUsersTable.deleteLambdaIntegration
+      // optionsWithAuthorizer
     )
   }
 }

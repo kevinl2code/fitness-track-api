@@ -1,5 +1,5 @@
 import { APIGatewayProxyEvent } from 'aws-lambda'
-import { handler } from '../../services/DailyEntriesTable/Delete'
+import { handler } from '../../services/FitnessTrackUsersTable/Delete'
 
 // const event: APIGatewayProxyEvent = {
 //   body: {

@@ -3,6 +3,9 @@ import { DailyEntry } from './Model'
 export class MissingFieldError extends Error {}
 
 export function validateAsDailyEntry(arg: any) {
+  if (!(arg as DailyEntry).sub) {
+    throw new MissingFieldError('Value for sub required!')
+  }
   if (!(arg as DailyEntry).dailyEntryId) {
     throw new MissingFieldError('Value for dailyEntryId required!')
   }

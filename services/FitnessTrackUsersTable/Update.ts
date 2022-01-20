@@ -8,6 +8,7 @@ import { addCorsHeader, getEventBody } from '../Shared/Utils'
 
 const TABLE_NAME = process.env.TABLE_NAME as string
 const PRIMARY_KEY = process.env.PRIMARY_KEY as string
+const SORT_KEY = process.env.SORT_KEY as string
 const dbClient = new DynamoDB.DocumentClient()
 
 async function handler(
@@ -21,9 +22,10 @@ async function handler(
   addCorsHeader(result)
 
   const requestBody = getEventBody(event)
-  const dailyEntryId = event.queryStringParameters?.[PRIMARY_KEY]
+  const userId = event.queryStringParameters?.[PRIMARY_KEY]
+  const sortKey = event.queryStringParameters?.[SORT_KEY]
 
-  if (requestBody && dailyEntryId) {
+  if (requestBody && userId && sortKey) {
     const requestBodyKey = Object.keys(requestBody)[0]
     const requestBodyValue = requestBody[requestBodyKey]
 
@@ -31,7 +33,8 @@ async function handler(
       .update({
         TableName: TABLE_NAME,
         Key: {
-          [PRIMARY_KEY]: dailyEntryId,
+          [PRIMARY_KEY]: userId,
+          [SORT_KEY]: sortKey,
         },
         UpdateExpression: 'set #zzzNew = :new',
         ExpressionAttributeValues: {
