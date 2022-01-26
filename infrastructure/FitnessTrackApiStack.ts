@@ -25,6 +25,22 @@ export class FitnessTrackApiStack extends Stack {
     secondaryIndexes: [],
   })
 
+  private fitnessTrackFoodsTable = new GenericTable(this, {
+    tableName: 'FitnessTrackFoodsTable',
+    primaryKey: 'PK',
+    sortKey: 'SK',
+    createLambdaPath: 'Create',
+    readLambdaPath: 'Read',
+    updateLambdaPath: 'Update',
+    deleteLambdaPath: 'Delete',
+    secondaryIndexes: [
+      {
+        pk: 'GSI1PK',
+        sk: 'GSI1SK',
+      },
+    ],
+  })
+
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props)
 
@@ -44,9 +60,9 @@ export class FitnessTrackApiStack extends Stack {
       },
     }
 
-    //DailyEntries API integrations
+    //Users API integrations
     const fitnessTrackUsersResource = this.api.root.addResource(
-      'dailyentries',
+      'user',
       optionsWithCors
     )
     fitnessTrackUsersResource.addMethod(
@@ -67,6 +83,32 @@ export class FitnessTrackApiStack extends Stack {
     fitnessTrackUsersResource.addMethod(
       'DELETE',
       this.fitnessTrackUsersTable.deleteLambdaIntegration,
+      optionsWithAuthorizer
+    )
+
+    //Foods API integrations
+    const fitnessTrackFoodsResource = this.api.root.addResource(
+      'foods',
+      optionsWithCors
+    )
+    fitnessTrackFoodsResource.addMethod(
+      'POST',
+      this.fitnessTrackFoodsTable.createLambdaIntegration,
+      optionsWithAuthorizer
+    )
+    fitnessTrackFoodsResource.addMethod(
+      'GET',
+      this.fitnessTrackFoodsTable.readLambdaIntegration,
+      optionsWithAuthorizer
+    )
+    fitnessTrackFoodsResource.addMethod(
+      'PUT',
+      this.fitnessTrackFoodsTable.updateLambdaIntegration,
+      optionsWithAuthorizer
+    )
+    fitnessTrackFoodsResource.addMethod(
+      'DELETE',
+      this.fitnessTrackFoodsTable.deleteLambdaIntegration,
       optionsWithAuthorizer
     )
   }

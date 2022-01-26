@@ -1,16 +1,19 @@
 @endpoint  = https://y8y1qedj8b.execute-api.us-east-2.amazonaws.com/prod
-@token = eyJraWQiOiJtSGFcL2loZzNIUE9ZSVlDQmtjM1NvYlhPWjRzbEdValIraWdsWWRXQkhZdz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIwODcyMjMyNy1kMzg2LTQ5MjMtYjYxNi1iOWY3YTIwMzA1MmMiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1ZWbXZtVUZUQiIsImNvZ25pdG86dXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJvcmlnaW5fanRpIjoiN2E0NzM1YWUtNjJkNC00MWY1LTk4N2MtMjIyZjUxMTVmNDFmIiwiY29nbml0bzpyb2xlcyI6WyJhcm46YXdzOmlhbTo6MjQxNDg5NTgzMTg3OnJvbGVcL0ZpdG5lc3NUcmFjay1Db2duaXRvQWRtaW5Sb2xlNEMxMEZCQTQtOEtYTUIxV0U2SzE4Il0sImF1ZCI6IjZwOGdnZjlqZWV0M2NraGU0ZHEyN2hsOXU4IiwiZXZlbnRfaWQiOiIyNzg0NzUzMC1kNGFlLTQ3N2EtYTczNS1mNzgwNGM4YmVlZGUiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY0MjY5NzE0MCwiZXhwIjoxNjQyNzAwNzQwLCJpYXQiOjE2NDI2OTcxNDAsImp0aSI6ImZiZDhkNmEyLThiYjAtNDFmYS05OWU0LWMzODdhMzk1NDYwNiIsImVtYWlsIjoiaGlnaGlAZmdoamkuY29tIn0.CA1cfny5vKveWUNqID6V3gtZS_UUYg1Dv_R0krxNR5qPVPZHTr54vzGRLb-YZtIecAAXdX1SHVcDkEwQGJu2wHi6JVXO6Xe6mLyggZKqVax_xRxIvu9DuPnleb9BnPyh4JL3EAmkyvN8EUhkQOTXDWnren3_vIk-4NVu2P0foqCJfLeAXYUrzYoKYimg9Yu5Ourhu5TwIGi8jWAYx7cLO7aHGnjTdLl6nRd8HeKfteD01wvmrLnLfLHH2AGQLV5S_dtFJR5ERRAM8mufqdgi2U7JfjRtfEyI6VYo2JQLTHyS9Z-dx161iS4ZW6uete4wYeV78gYTw-4cd0xp3wMLaQ
+@token = eyJraWQiOiJtSGFcL2loZzNIUE9ZSVlDQmtjM1NvYlhPWjRzbEdValIraWdsWWRXQkhZdz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIwODcyMjMyNy1kMzg2LTQ5MjMtYjYxNi1iOWY3YTIwMzA1MmMiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1ZWbXZtVUZUQiIsImNvZ25pdG86dXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJvcmlnaW5fanRpIjoiODVkZTA1MzAtYmMzMC00ZTkyLWJhYmQtZTQwN2VjNDJjYjExIiwiY29nbml0bzpyb2xlcyI6WyJhcm46YXdzOmlhbTo6MjQxNDg5NTgzMTg3OnJvbGVcL0ZpdG5lc3NUcmFjay1Db2duaXRvQWRtaW5Sb2xlNEMxMEZCQTQtOEtYTUIxV0U2SzE4Il0sImF1ZCI6IjZwOGdnZjlqZWV0M2NraGU0ZHEyN2hsOXU4IiwiZXZlbnRfaWQiOiI0NjQ0NWRjOC0xMzM5LTRkMTMtYjY4OC0yZDVmMTYwNTJjM2EiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY0MzE1NTE0MiwiZXhwIjoxNjQzMTU4NzQyLCJpYXQiOjE2NDMxNTUxNDIsImp0aSI6IjgwOTNiZWQwLWVkMTgtNGUyOS1hMGNkLTU2MGYwODI3NTA0NSIsImVtYWlsIjoiaGlnaGlAZmdoamkuY29tIn0.V81336jwVzIjoXdp8OXdLcKPYaFv0MPlDc1SIVvvQnjgyQZ_NGhIzq_FfsKSWBomNA6sCfWsu3D4DadTBcZ0xs_iML3kqDj9u77WB5NjIqXKhdkWuah1N1EyHlM5-MDFJuC9xvmnBrNJ7Xld05Z92aVyjL1Dg6165QLwaWuxeNy4Go8zMqq7ibsrUv9S_qIhnBdq_v8Ia12RZpJteHMkZXriGjEPzBfvZW2QpYG0ANPuTuIBOFUO0PZcBa9oMqdDnIBzybg3XC_dtsKtnNdUnzSzYli2i5yvYCvIpsxTvKDLR6dT--aue_Ih7WopOItNonRLYs9bXDFHFd501xtkRg
 
-GET {{endpoint}}/dailyentries/  
+
+GET {{endpoint}}/user/  
 Authorization: {{token}}
 ###
 
-GET {{endpoint}}/dailyentries?userId=d92bfee4-1ac2-4996-9961-4c531cab132f
+GET {{endpoint}}/user?userId=d92bfee4-1ac2-4996-9961-4c531cab132f&sortKey=20220110
+Authorization: {{token}}
 ###
-GET {{endpoint}}/dailyentries?date=01/31/2021
+GET {{endpoint}}/user?date=01/11/2021
+Authorization: {{token}}
 ###
 
-PUT {{endpoint}}/dailyentries?userId=d92bfee4-1ac2-4996-9961-4c531cab132f&sortKey=20220119
+PUT {{endpoint}}/user?userId=d92bfee4-1ac2-4996-9961-4c531cab132f&sortKey=20220119
 Content-Type: application/json
 
 {  "dailyEntryMeals": [{
@@ -29,18 +32,7 @@ Content-Type: application/json
     "protein": 1
   }] }
 
-# {
-#   "date": "01/31/2021",
-#   "weight": "123",
-#   "meals": [{
-#   "calories": "600",
-#   "protein": "60"
-# }],
-#   "activityLevel": "VERY_ACTIVE"
-# }
-###
-
-POST {{endpoint}}/dailyentries/
+POST {{endpoint}}/user/
 Authorization: {{token}}
 Content-Type: application/json
 
@@ -50,5 +42,174 @@ Content-Type: application/json
 }
 ###
 
-DELETE {{endpoint}}/dailyentries?dailyEntryId=81931f22-3968-4dea-af3f-6c48ed279187
+DELETE {{endpoint}}/user?dailyEntryId=81931f22-3968-4dea-af3f-6c48ed279187
+###
+
+
+
+
+
+
+# FOODS
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "CATEGORIES",
+  "SK": "C_meat12345",
+  "type": "CATEGORY",
+  "name": "MEAT",
+  "subCategories": [{
+    "name": "BEEF",
+    "subCategoryId": "beef1234"
+  }, {
+    "name": "LAMB",
+    "subCategoryId": "lamb1234"
+  }, {
+    "name": "PORK",
+    "subCategoryId": "pork1234"
+  }],
+  "categoryId": "meat12345"
+}
+###
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "CATEGORIES",
+  "SK": "C_fruit12345",
+  "type": "CATEGORY",
+  "name": "FRUIT",
+  "subCategories": [{
+    "name": "COMMON",
+    "subCategoryId": "common1234"
+  }, {
+    "name": "MELON",
+    "subCategoryId": "melon1234"
+  }, {
+    "name": "CITRUS",
+    "subCategoryId": "citrus1234"
+  }],
+  "categoryId": "fruit12345"
+}
+###
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "SUBCATEGORIES",
+  "SK": "S_beef1234",
+  "type": "SUBCATEGORY",
+  "name": "BEEF",
+  "subCategoryId": "beef1234"
+}
+###
+
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "SUBCATEGORIES",
+  "SK": "S_pork1234",
+  "type": "SUBCATEGORY",
+  "name": "PORK",
+  "subCategoryId": "pork1234"
+}
+###
+
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "F_ribeye1234",
+  "SK": "METADATA",
+  "GSI1PK": "C_meat12345",
+  "GSI1SK": "S_beef1234",
+  "type": "FOOD",
+  "foodItemName": "ribeye",
+  "foodItemUnit": "GRAMS",
+  "servingSize": 100,
+  "calories": 291,
+  "protein": 24,
+  "categoryId": "meat12345",
+  "subCategoryId": "beef1234",
+  "foodItemId": "ribeye1234"
+}
+###
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "F_filet1234",
+  "SK": "METADATA",
+  "GSI1PK": "C_meat12345",
+  "GSI1SK": "S_beef1234",
+  "type": "FOOD",
+  "foodItemName": "filet",
+  "foodItemUnit": "GRAMS",
+  "servingSize": 100,
+  "calories": 267,
+  "protein": 26,
+  "categoryId": "meat12345",
+  "subCategoryId": "beef1234",
+  "foodItemId": "filet1234"
+}
+###
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "F_porkloin1234",
+  "SK": "METADATA",
+  "GSI1PK": "C_meat12345",
+  "GSI1SK": "S_pork1234",
+  "type": "FOOD",
+  "foodItemName": "porkloin",
+  "foodItemUnit": "GRAMS",
+  "servingSize": 100,
+  "calories": 242,
+  "protein": 27,
+  "categoryId": "meat12345",
+  "subCategoryId": "pork1234",
+  "foodItemId": "porkloin1234"
+}
+###
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "F_bacon1234",
+  "SK": "METADATA",
+  "GSI1PK": "C_meat12345",
+  "GSI1SK": "S_pork1234",
+  "type": "FOOD",
+  "foodItemName": "bacon",
+  "foodItemUnit": "GRAMS",
+  "servingSize": 100,
+  "calories": 541,
+  "protein": 37,
+  "categoryId": "meat12345",
+  "subCategoryId": "pork1234",
+  "foodItemId": "bacon1234"
+}
+###
+
+
+GET {{endpoint}}/foods?PK=F_bacon1234
+Authorization: {{token}}
 ###
