@@ -1,5 +1,5 @@
 @endpoint  = https://y8y1qedj8b.execute-api.us-east-2.amazonaws.com/prod
-@token = eyJraWQiOiJtSGFcL2loZzNIUE9ZSVlDQmtjM1NvYlhPWjRzbEdValIraWdsWWRXQkhZdz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIwODcyMjMyNy1kMzg2LTQ5MjMtYjYxNi1iOWY3YTIwMzA1MmMiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX1ZWbXZtVUZUQiIsImNvZ25pdG86dXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJvcmlnaW5fanRpIjoiODVkZTA1MzAtYmMzMC00ZTkyLWJhYmQtZTQwN2VjNDJjYjExIiwiY29nbml0bzpyb2xlcyI6WyJhcm46YXdzOmlhbTo6MjQxNDg5NTgzMTg3OnJvbGVcL0ZpdG5lc3NUcmFjay1Db2duaXRvQWRtaW5Sb2xlNEMxMEZCQTQtOEtYTUIxV0U2SzE4Il0sImF1ZCI6IjZwOGdnZjlqZWV0M2NraGU0ZHEyN2hsOXU4IiwiZXZlbnRfaWQiOiI0NjQ0NWRjOC0xMzM5LTRkMTMtYjY4OC0yZDVmMTYwNTJjM2EiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY0MzE1NTE0MiwiZXhwIjoxNjQzMTU4NzQyLCJpYXQiOjE2NDMxNTUxNDIsImp0aSI6IjgwOTNiZWQwLWVkMTgtNGUyOS1hMGNkLTU2MGYwODI3NTA0NSIsImVtYWlsIjoiaGlnaGlAZmdoamkuY29tIn0.V81336jwVzIjoXdp8OXdLcKPYaFv0MPlDc1SIVvvQnjgyQZ_NGhIzq_FfsKSWBomNA6sCfWsu3D4DadTBcZ0xs_iML3kqDj9u77WB5NjIqXKhdkWuah1N1EyHlM5-MDFJuC9xvmnBrNJ7Xld05Z92aVyjL1Dg6165QLwaWuxeNy4Go8zMqq7ibsrUv9S_qIhnBdq_v8Ia12RZpJteHMkZXriGjEPzBfvZW2QpYG0ANPuTuIBOFUO0PZcBa9oMqdDnIBzybg3XC_dtsKtnNdUnzSzYli2i5yvYCvIpsxTvKDLR6dT--aue_Ih7WopOItNonRLYs9bXDFHFd501xtkRg
+@token = eyJraWQiOiJtSGFcL2loZzNIUE9ZSVlDQmtjM1NvYlhPWjRzbEdValIraWdsWWRXQkhZdz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIwODcyMjMyNy1kMzg2LTQ5MjMtYjYxNi1iOWY3YTIwMzA1MmMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfVlZtdm1VRlRCIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3R1c2VyMSIsIm9yaWdpbl9qdGkiOiI2OWM2MmFlZi0wM2E4LTQwMGQtYmI3OC01NTQ1ODc4NGQyN2IiLCJhdWQiOiI2cDhnZ2Y5amVldDNja2hlNGRxMjdobDl1OCIsImV2ZW50X2lkIjoiYjVmMTBjN2ItNjQxNS00YTc2LTllMWYtOGYxNjdlNjM4MTEwIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NDMzMjE0OTksImV4cCI6MTY0MzMyNTA5OSwiaWF0IjoxNjQzMzIxNDk5LCJqdGkiOiJkNGVkMjAxMi0zZjk0LTQzNTQtYjg4Ni1hYjNhMDA1YzA5NDciLCJlbWFpbCI6ImhpZ2hpQGZnaGppLmNvbSJ9.Y6-u9FKtMoQNOjWsGU6qGzwrsCqzQTYA9sbeVFIbAI3LgcSe321UMGMlcDtEAFvr9X6IuSNlwX5GYUcm674DDRfnRbT-mRBM5884CHsk4ZKrhCwEMnfRPQYvU0tlVJJ9GtbTJFzaIermVmyTKo3vRLkiqWsb9ZBA1PtsDIEwPrGwVswmN9v3KKDyHkMsCKncx2d2OIyJ67DdeSgCw6XWITVCQj2k3xyKrj5k8AXsz6yYAxMpwiPWipu1Vh9npSZF4TBUbgZpBVebF11XE7R6S34W4Jzy90SdQJ4EDrh4J4of2mQYnYe2UJDr1L1LD4G6yizNsBJgmeQSRXJSg6JO0w
 
 
 GET {{endpoint}}/user/  
@@ -61,16 +61,6 @@ Content-Type: application/json
   "SK": "C_meat12345",
   "type": "CATEGORY",
   "name": "MEAT",
-  "subCategories": [{
-    "name": "BEEF",
-    "subCategoryId": "beef1234"
-  }, {
-    "name": "LAMB",
-    "subCategoryId": "lamb1234"
-  }, {
-    "name": "PORK",
-    "subCategoryId": "pork1234"
-  }],
   "categoryId": "meat12345"
 }
 ###
@@ -83,16 +73,6 @@ Content-Type: application/json
   "SK": "C_fruit12345",
   "type": "CATEGORY",
   "name": "FRUIT",
-  "subCategories": [{
-    "name": "COMMON",
-    "subCategoryId": "common1234"
-  }, {
-    "name": "MELON",
-    "subCategoryId": "melon1234"
-  }, {
-    "name": "CITRUS",
-    "subCategoryId": "citrus1234"
-  }],
   "categoryId": "fruit12345"
 }
 ###
@@ -104,8 +84,11 @@ Content-Type: application/json
 {
   "PK": "SUBCATEGORIES",
   "SK": "S_beef1234",
+  "GSI2PK": "C_meat12345",
+  "GSI2SK": "METADATA",
   "type": "SUBCATEGORY",
   "name": "BEEF",
+  "categoryId": "meat12345",
   "subCategoryId": "beef1234"
 }
 ###
@@ -118,9 +101,29 @@ Content-Type: application/json
 {
   "PK": "SUBCATEGORIES",
   "SK": "S_pork1234",
+  "GSI2PK": "C_meat12345",
+  "GSI2SK": "METADATA",
   "type": "SUBCATEGORY",
   "name": "PORK",
+  "categoryId": "meat12345",
   "subCategoryId": "pork1234"
+}
+###
+
+
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "SUBCATEGORIES",
+  "SK": "S_citrus1234",
+  "GSI2PK": "C_fruit12345",
+  "GSI2SK": "METADATA",
+  "type": "SUBCATEGORY",
+  "name": "CITRUS",
+  "categoryId": "fruit12345",
+  "subCategoryId": "citrus1234"
 }
 ###
 
@@ -140,6 +143,8 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 291,
   "protein": 24,
+  "carbohydates": 5,
+  "fat": 10,
   "categoryId": "meat12345",
   "subCategoryId": "beef1234",
   "foodItemId": "ribeye1234"
@@ -161,6 +166,8 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 267,
   "protein": 26,
+  "carbohydates": 3,
+  "fat": 6,
   "categoryId": "meat12345",
   "subCategoryId": "beef1234",
   "foodItemId": "filet1234"
@@ -182,6 +189,8 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 242,
   "protein": 27,
+  "carbohydates": 3,
+  "fat": 2,
   "categoryId": "meat12345",
   "subCategoryId": "pork1234",
   "foodItemId": "porkloin1234"
@@ -203,13 +212,42 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 541,
   "protein": 37,
+  "carbohydates": 2,
+  "fat": 15,
   "categoryId": "meat12345",
   "subCategoryId": "pork1234",
   "foodItemId": "bacon1234"
 }
 ###
 
+POST {{endpoint}}/foods/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "PK": "F_lime1234",
+  "SK": "METADATA",
+  "GSI1PK": "C_fruit12345",
+  "GSI1SK": "S_citrus1234",
+  "type": "FOOD",
+  "foodItemName": "lime",
+  "foodItemUnit": "GRAMS",
+  "servingSize": 10,
+  "calories": 5,
+  "protein": 0,
+  "fat": 0,
+  "carbohydrates": 1.25,
+  "categoryId": "fruit12345",
+  "subCategoryId": "citrus1234",
+  "foodItemId": "lime1234"
+}
+###
+
 
 GET {{endpoint}}/foods?PK=F_bacon1234
+Authorization: {{token}}
+###
+
+GET {{endpoint}}/foods?GSI2PK=C_meat12345&GSI2SK=METADATA
 Authorization: {{token}}
 ###

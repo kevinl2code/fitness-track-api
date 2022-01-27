@@ -38,6 +38,10 @@ export class FitnessTrackApiStack extends Stack {
         pk: 'GSI1PK',
         sk: 'GSI1SK',
       },
+      {
+        pk: 'GSI2PK',
+        sk: 'GSI2SK',
+      },
     ],
   })
 

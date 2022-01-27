@@ -82,31 +82,31 @@ export type SnacksSubs = 'CHIPS' | 'NUTS' | 'JERKEY' | 'CANDY'
 
 export type FoodItemUnits = 'GRAMS' | 'OUNCES' | 'EACH'
 
-//SK is string formatted as C#<categoryId>
+//SK is string formatted as C_<categoryId>
 export interface Categories {
   PK: 'CATEGORIES'
   SK: string
   type: 'CATEGORY'
   name: CategoryNames
-  subCategories: {
-    name: MeatSubs
-    subCategoryId: string
-  }[]
   categoryId: string
 }
 
-//SK is string formatted as S#<subCategoryId>
+//SK is string formatted as S_<subCategoryId>
+//GSI2PK should be in format C_<categoryId>
 export interface SubCategories {
   PK: 'SUBCATEGORIES'
   SK: string
+  GSI2PK: string
+  GSI2SK: 'METADATA'
   type: 'SUBCATEGORY'
   name: SubCategoryNames
+  categoryId: string
   subCategoryId: string
 }
 
 //PK should be in format F#<foodItemId>
-//GSI1PK should be in format C#<categoryId>
-//GSI1SK should be in format S#<subCategoryId>#F#<foodItemId>
+//GSI1PK should be in format C_<categoryId>
+//GSI1SK should be in format S_<subCategoryId>#F#<foodItemId>
 export interface FitnessTrackFoodItem {
   PK: string
   SK: 'METADATA'
@@ -118,6 +118,8 @@ export interface FitnessTrackFoodItem {
   servingSize: number
   calories: number
   protein: number
+  fat: number
+  carbohydrates: number
   categoryId: string
   subCategoryId: string
   foodItemId: string
