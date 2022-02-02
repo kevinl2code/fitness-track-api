@@ -16,13 +16,22 @@ export class FitnessTrackApiStack extends Stack {
 
   private fitnessTrackUsersTable = new GenericTable(this, {
     tableName: 'FitnessTrackUsersTable',
-    primaryKey: 'userId',
-    sortKey: 'sortKey',
+    primaryKey: 'PK',
+    sortKey: 'SK',
     createLambdaPath: 'Create',
     readLambdaPath: 'Read',
     updateLambdaPath: 'Update',
     deleteLambdaPath: 'Delete',
-    secondaryIndexes: [],
+    secondaryIndexes: [
+      {
+        pk: 'GSI1PK',
+        sk: 'GSI1SK',
+      },
+      {
+        pk: 'GSI2PK',
+        sk: 'GSI2SK',
+      },
+    ],
   })
 
   private fitnessTrackFoodsTable = new GenericTable(this, {

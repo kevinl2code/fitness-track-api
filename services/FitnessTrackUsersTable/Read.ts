@@ -77,7 +77,26 @@ async function queryWithPrimaryPartition(
   queryParams: APIGatewayProxyEventQueryStringParameters
 ) {
   const keyValue = queryParams[PRIMARY_KEY!]
-  const sortKeyValue = queryParams[SORT_KEY!]
+  // const sortKeyValue = queryParams[SORT_KEY!]
+  const queryResponse = await dbClient
+    .query({
+      TableName: TABLE_NAME!,
+      KeyConditionExpression: '#zz = :zzzz',
+      ExpressionAttributeNames: {
+        '#zz': PRIMARY_KEY!,
+      },
+      ExpressionAttributeValues: {
+        ':zzzz': keyValue,
+      },
+    })
+    .promise()
+  return JSON.stringify(queryResponse.Items)
+}
+async function queryMostRecentEntryWithPrimaryPartition(
+  queryParams: APIGatewayProxyEventQueryStringParameters
+) {
+  const keyValue = queryParams[PRIMARY_KEY!]
+  // const sortKeyValue = queryParams[SORT_KEY!]
   const queryResponse = await dbClient
     .query({
       TableName: TABLE_NAME!,

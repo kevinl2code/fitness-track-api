@@ -26,13 +26,16 @@ async function handler(
     console.log(item)
     // item.dailyEntryId = v4()
     // validateAsDailyEntry(item)
-    await dbClient
-      .put({
-        TableName: TABLE_NAME!,
-        Item: item,
-      })
-      .promise()
-    result.body = JSON.stringify(`created item`)
+    if (item.type === 'CATEGORY') {
+      validateAsCategory(item)
+      await dbClient
+        .put({
+          TableName: TABLE_NAME!,
+          Item: item,
+        })
+        .promise()
+      result.body = JSON.stringify(`created item`)
+    }
   } catch (error) {
     if (error instanceof Error) {
       result.body = error.message
@@ -43,3 +46,6 @@ async function handler(
 }
 
 export { handler }
+function validateAsCategory(item: any) {
+  throw new Error('Function not implemented.')
+}

@@ -18,8 +18,8 @@
       "env": {
         "AWS_REGION": "us-east-2",
         "TABLE_NAME": "FitnessTrackUsersTable",
-        "PRIMARY_KEY": "userId",
-        "SORT_KEY": "sortKey"
+        "PRIMARY_KEY": "PK",
+        "SORT_KEY": "SK"
       }
     }
   ]

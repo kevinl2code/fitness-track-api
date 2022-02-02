@@ -1,4 +1,4 @@
-@endpoint  = https://y8y1qedj8b.execute-api.us-east-2.amazonaws.com/prod
+@endpoint  = https://c82hrtfi53.execute-api.us-east-2.amazonaws.com/prod
 @token = eyJraWQiOiJtSGFcL2loZzNIUE9ZSVlDQmtjM1NvYlhPWjRzbEdValIraWdsWWRXQkhZdz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIwODcyMjMyNy1kMzg2LTQ5MjMtYjYxNi1iOWY3YTIwMzA1MmMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfVlZtdm1VRlRCIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3R1c2VyMSIsIm9yaWdpbl9qdGkiOiI2OWM2MmFlZi0wM2E4LTQwMGQtYmI3OC01NTQ1ODc4NGQyN2IiLCJhdWQiOiI2cDhnZ2Y5amVldDNja2hlNGRxMjdobDl1OCIsImV2ZW50X2lkIjoiYjVmMTBjN2ItNjQxNS00YTc2LTllMWYtOGYxNjdlNjM4MTEwIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NDMzMjE0OTksImV4cCI6MTY0MzMyNTA5OSwiaWF0IjoxNjQzMzIxNDk5LCJqdGkiOiJkNGVkMjAxMi0zZjk0LTQzNTQtYjg4Ni1hYjNhMDA1YzA5NDciLCJlbWFpbCI6ImhpZ2hpQGZnaGppLmNvbSJ9.Y6-u9FKtMoQNOjWsGU6qGzwrsCqzQTYA9sbeVFIbAI3LgcSe321UMGMlcDtEAFvr9X6IuSNlwX5GYUcm674DDRfnRbT-mRBM5884CHsk4ZKrhCwEMnfRPQYvU0tlVJJ9GtbTJFzaIermVmyTKo3vRLkiqWsb9ZBA1PtsDIEwPrGwVswmN9v3KKDyHkMsCKncx2d2OIyJ67DdeSgCw6XWITVCQj2k3xyKrj5k8AXsz6yYAxMpwiPWipu1Vh9npSZF4TBUbgZpBVebF11XE7R6S34W4Jzy90SdQJ4EDrh4J4of2mQYnYe2UJDr1L1LD4G6yizNsBJgmeQSRXJSg6JO0w
 
 
@@ -143,7 +143,7 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 291,
   "protein": 24,
-  "carbohydates": 5,
+  "carbohydrates": 5,
   "fat": 10,
   "categoryId": "meat12345",
   "subCategoryId": "beef1234",
@@ -166,7 +166,7 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 267,
   "protein": 26,
-  "carbohydates": 3,
+  "carbohydrates": 3,
   "fat": 6,
   "categoryId": "meat12345",
   "subCategoryId": "beef1234",
@@ -189,7 +189,7 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 242,
   "protein": 27,
-  "carbohydates": 3,
+  "carbohydrates": 3,
   "fat": 2,
   "categoryId": "meat12345",
   "subCategoryId": "pork1234",
@@ -212,7 +212,7 @@ Content-Type: application/json
   "servingSize": 100,
   "calories": 541,
   "protein": 37,
-  "carbohydates": 2,
+  "carbohydrates": 2,
   "fat": 15,
   "categoryId": "meat12345",
   "subCategoryId": "pork1234",
