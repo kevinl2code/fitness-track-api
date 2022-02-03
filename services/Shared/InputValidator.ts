@@ -45,7 +45,7 @@ export function validateAsDailyEntry(arg: any) {
 // dailyEntryActivityLevel: ActivityLevel
 // cycleId: string
 
-export function fitnessTrackCategory(arg: any) {
+export function validateAsFitnessTrackCategory(arg: any) {
   if (!(arg as Category).PK) {
     throw new MissingFieldError('Value for PK required!')
   }

@@ -13,34 +13,14 @@ export type ActivityLevel =
   | 'VERY_ACTIVE'
   | 'EXTRA_ACTIVE'
 
-// export interface DailyEntry {
-//   dailyEntryId: string
-//   sub: string
-//   date: string
-//   weight: number
-//   meals: Meal[] | []
-//   activityLevel: ActivityLevel
-// }
-
-//Sort key should be the word cycle followed by three numbers starting at 000
-//For example, "cycle000"
-// export interface FitnessTrackUserCycle {
-//   userId: string
-//   sortKey: string
-//   cycleType: CycleType
-//   cycleStartingWeight: number
-//   cycleGoalWeight: number
-//   cycleStartDate: string
-//   cycleDuration: number
-// }
-
 //PK should be the users ID -- cognito sub value
-//GSI2PK should be in format C_cycleId
+//SK should be in format C_cycleId
+//GSI2PK should be in format U_userId
 export interface Cycle {
   PK: string
-  SK: 'CYCLE'
+  SK: string
   GSI2PK: string
-  GSI2SK: 'METADATA'
+  GSI2SK: 'CYCLES'
   type: 'CYCLE'
   cycleType: CycleType
   startingWeight: number
@@ -53,21 +33,13 @@ export interface Cycle {
   cycleId: string
 }
 
-//Sortkey should be the entry date, written using ISO 8601 strings such as 20190823
-// export interface FitnessTrackUserDailyEntry {
-//   userId: string
-//   sortKey: string
-//   dailyEntryWeight: number
-//   dailyEntryMeals: Meal[] | []
-//   dailyEntryActivityLevel: ActivityLevel
-// }
-
 //PK should be the users ID -- cognito sub value
+//SK should be the entry date, written using ISO 8601(yyyymmdd) strings such as 20190823
 //GSI1PK should be in format C_cycleId
 //GSI1SK should be the entry date, written using ISO 8601(yyyymmdd) strings such as 20190823
 export interface DailyEntry {
   PK: string
-  SK: 'DAILYENTRY'
+  SK: string
   GSI1PK: string
   GSI1SK: string
   type: 'DAILYENTRY'

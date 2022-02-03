@@ -6,6 +6,7 @@ import {
 } from 'aws-lambda'
 import { v4 } from 'uuid'
 import { addCorsHeader } from '../Shared/Utils'
+import { validateAsFitnessTrackCategory } from '../Shared/InputValidator'
 
 const TABLE_NAME = process.env.TABLE_NAME
 const dbClient = new DynamoDB.DocumentClient()
@@ -27,7 +28,27 @@ async function handler(
     // item.dailyEntryId = v4()
     // validateAsDailyEntry(item)
     if (item.type === 'CATEGORY') {
-      validateAsCategory(item)
+      validateAsFitnessTrackCategory(item)
+      await dbClient
+        .put({
+          TableName: TABLE_NAME!,
+          Item: item,
+        })
+        .promise()
+      result.body = JSON.stringify(`created item`)
+    }
+    if (item.type === 'SUBCATEGORY') {
+      // validateAsFitnessTrackCategory(item)
+      await dbClient
+        .put({
+          TableName: TABLE_NAME!,
+          Item: item,
+        })
+        .promise()
+      result.body = JSON.stringify(`created item`)
+    }
+    if (item.type === 'FOOD') {
+      // validateAsFitnessTrackCategory(item)
       await dbClient
         .put({
           TableName: TABLE_NAME!,
@@ -46,6 +67,3 @@ async function handler(
 }
 
 export { handler }
-function validateAsCategory(item: any) {
-  throw new Error('Function not implemented.')
-}
