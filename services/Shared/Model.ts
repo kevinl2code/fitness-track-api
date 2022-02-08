@@ -72,7 +72,7 @@ export type SubCategoryNames =
   | RestaurantsSubs
   | SnacksSubs
 
-export type MeatSubs = 'BEEF' | 'LAMB' | 'PORK' | 'CHICKEN' | 'FISH'
+export type MeatSubs = 'BEEF' | 'LAMB' | 'PORK' | 'POULTRY' | 'FISH'
 export type FruitSubs = 'COMMON' | 'MELON' | 'CITRUS' | 'TROPICAL'
 export type VegetablesSubs = 'COMMON' | 'UNCOMMON' | 'STARCHY'
 export type StarchesSubs = 'BREAD' | 'RICE' | 'PASTA' | 'POTATOS'

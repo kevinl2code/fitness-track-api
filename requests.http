@@ -1,6 +1,5 @@
 @endpoint  = https://c82hrtfi53.execute-api.us-east-2.amazonaws.com/prod
-@token = eyJraWQiOiJKM0ppQlwvZ0pEdGQxZDVsS3VNNGM0a0RGQ3M4M2hjczJ5RW5xU2tsSStFND0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmODk2MGZmOS1kNGNjLTRmNDMtOTA5Ni1iODA0MjFiODVlODAiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX2t4TFBXWFZQOCIsImNvZ25pdG86dXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJvcmlnaW5fanRpIjoiNDQ5OTliYjQtZDA5YS00MWY3LTk0NTItOWFlMjA5YzQ1NjE3IiwiY29nbml0bzpyb2xlcyI6WyJhcm46YXdzOmlhbTo6MjQxNDg5NTgzMTg3OnJvbGVcL0ZpdG5lc3NUcmFjay1Db2duaXRvQWRtaW5Sb2xlNEMxMEZCQTQtNEkzUEcwWUxWMzFEIl0sImF1ZCI6InNhdWd0aXFqcXJkZGk0NDZhM3RyY3FtNW4iLCJldmVudF9pZCI6ImU3Y2I1ZGNmLTM4OTQtNDNmOC1iZTRkLTEyOTA0N2NlNjJiYSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjQzOTE4OTI5LCJleHAiOjE2NDM5MjI1MjksImlhdCI6MTY0MzkxODkyOSwianRpIjoiZDFhYzU0MWQtZGJjYi00OTdhLThhM2MtZjBkZWQ2Yzc5MGYyIiwiZW1haWwiOiJ0ZXN0MTIzQHRlc3QxMjMuY29tIn0.4ogXo-ziNkxAd15kgYkU2ArS0kqBBaXUgpuAnmU-vwJV3RGb8rfOHl_rYoB5wINF_L-FZ8VbEQjwYOaSPVo0orwW-bCIGkt6fan6-f98Y2qOXVDU_P1enNqkmnhCjuhoih8IUWGeAf3U9zOz-5JE-5pz509p8PKsFXJdIzWFYoEGZyYK18hsmu8YMsZJTf-jsqMwa3gLZ_L_VhEJ3eEN-rPGYGyLfyjS0o2BBaEKfVUQxeNkXruaL3uEJ6CD8U8aQTNSRZeVos8f6UraJa6YE3jfPhUJ-DA2XrD4iNiEOjqoviTX5Vydtxji4utRFY4En7Clex-VuLU9SO7BfM4SAg
-
+@token = eyJraWQiOiJKM0ppQlwvZ0pEdGQxZDVsS3VNNGM0a0RGQ3M4M2hjczJ5RW5xU2tsSStFND0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmODk2MGZmOS1kNGNjLTRmNDMtOTA5Ni1iODA0MjFiODVlODAiLCJjb2duaXRvOmdyb3VwcyI6WyJhZG1pbnMiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0yX2t4TFBXWFZQOCIsImNvZ25pdG86dXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJvcmlnaW5fanRpIjoiZjg2ZDY1ZmYtMThlNC00ZWNlLWIwMjQtM2JmYTQ0M2E0NjNlIiwiY29nbml0bzpyb2xlcyI6WyJhcm46YXdzOmlhbTo6MjQxNDg5NTgzMTg3OnJvbGVcL0ZpdG5lc3NUcmFjay1Db2duaXRvQWRtaW5Sb2xlNEMxMEZCQTQtNEkzUEcwWUxWMzFEIl0sImF1ZCI6InNhdWd0aXFqcXJkZGk0NDZhM3RyY3FtNW4iLCJldmVudF9pZCI6Ijg3MThiYzJhLWVjNDctNGI0MC05NjI0LWExN2VjMjhjNzMyNSIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjQ0MzQ1MTg1LCJleHAiOjE2NDQzNDg3ODUsImlhdCI6MTY0NDM0NTE4NSwianRpIjoiZGE3ODEwMzQtNjc5OS00MjQ4LWFjOWUtOTdhZDBmNDAxNTIwIiwiZW1haWwiOiJ0ZXN0MTIzQHRlc3QxMjMuY29tIn0.k4DBRgwGad-d3euAmSsTanD4QoC1TVrOLBM4XxHGdTl5wzpAaX8GdWEFwMkC3Et8wKs7tUJNoZmpET0jZ_IxLFvoMcLmKPJDzTaeygpyExUd6FluoE-OR703-bhpOIiIaeC7qqSvMa1gRkALM5A6QIrELyhyRtHxarJdN32HlbHgJSzR7KICBDrAuZbr9tsA3wBOLlXv1crG1iHwSWzmUz7WLwbAXcF_WkisR552WjPSbaYTQMGqwnqPvMdYfntvymrKOoo-4FSa2Jt6tNTltR5BCWKAUu1cYczZYcZQmAdQ29ZuoYbW3VL1qBzdjwGrJHPieqwwC1gngQcuMflqbQ
 
 
 
@@ -247,10 +246,36 @@ Content-Type: application/json
 ###
 
 
-GET {{endpoint}}/foods?PK=F_bacon1234
+GET {{endpoint}}/foods?PK=F_75a97e08-3d54-4469-b48a-3db088e5c805&SK=METADATA
 Authorization: {{token}}
 ###
 
 GET {{endpoint}}/foods?GSI2PK=C_meat12345&GSI2SK=METADATA
 Authorization: {{token}}
+###
+
+
+
+
+PUT {{endpoint}}/foods?PK=F_75a97e08-3d54-4469-b48a-3db088e5c805&SK=METADATA
+Authorization: {{token}}
+Content-Type: application/json
+
+  {
+    "foodItemId": "75a97e08-3d54-4469-b48a-3db088e5c805",
+    "foodItemUnit": "GRAMS",
+    "subCategoryId": "34727999-6bf7-45d6-bbb2-65e811c2bcd3",
+    "GSI1SK": "S_34727999-6bf7-45d6-bbb2-65e811c2bcd3",
+    "servingSize": 100,
+    "GSI1PK": "C_62f939a9-5ccd-4364-a6bf-9a784b229dc0",
+    "foodItemName": "Chicken Breast (Boneless, Skinless) - Grilled",
+    "protein": 30.5,
+    "calories": 151,
+    "categoryId": "62f939a9-5ccd-4364-a6bf-9a784b229dc0",
+    "fat": 3.17,
+    "carbohydrates": 0,
+    "foodItemReference": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/171534/nutrients",
+    "type": "FOOD"
+  }
+
 ###
