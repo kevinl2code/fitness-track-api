@@ -8,6 +8,7 @@ import { addCorsHeader } from '../Shared/Utils'
 
 const TABLE_NAME = process.env.TABLE_NAME as string
 const PRIMARY_KEY = process.env.PRIMARY_KEY as string
+const SORT_KEY = process.env.SORT_KEY
 const dbClient = new DynamoDB.DocumentClient()
 
 async function handler(
@@ -20,14 +21,16 @@ async function handler(
   }
   addCorsHeader(result)
 
-  const dailyEntryId = event.queryStringParameters?.[PRIMARY_KEY]
+  const PK = event.queryStringParameters?.[PRIMARY_KEY]
+  const SK = event.queryStringParameters?.[SORT_KEY!]
 
-  if (dailyEntryId) {
+  if (PK && SK) {
     const deleteResult = await dbClient
       .delete({
         TableName: TABLE_NAME,
         Key: {
-          [PRIMARY_KEY]: dailyEntryId,
+          [PRIMARY_KEY]: PK,
+          [SORT_KEY!]: SK,
         },
       })
       .promise()
