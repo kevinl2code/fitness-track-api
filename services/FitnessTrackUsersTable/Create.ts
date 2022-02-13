@@ -33,7 +33,7 @@ async function handler(
         Item: item,
       })
       .promise()
-    result.body = JSON.stringify(`created item`)
+    result.body = JSON.stringify(item)
   } catch (error) {
     if (error instanceof Error) {
       result.body = error.message
