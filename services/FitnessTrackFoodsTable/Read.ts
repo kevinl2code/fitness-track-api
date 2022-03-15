@@ -52,26 +52,26 @@ async function handler(
   return result
 }
 
-async function queryWithSecondaryPartition(
-  queryParams: APIGatewayProxyEventQueryStringParameters
-) {
-  const queryKey = Object.keys(queryParams)[0]
-  const queryValue = queryParams[queryKey]
-  const queryResponse = await dbClient
-    .query({
-      TableName: TABLE_NAME!,
-      IndexName: queryKey,
-      KeyConditionExpression: '#zz = :zzzz',
-      ExpressionAttributeNames: {
-        '#zz': queryKey,
-      },
-      ExpressionAttributeValues: {
-        ':zzzz': queryValue,
-      },
-    })
-    .promise()
-  return JSON.stringify(queryResponse.Items)
-}
+// async function queryWithSecondaryPartition(
+//   queryParams: APIGatewayProxyEventQueryStringParameters
+// ) {
+//   const queryKey = Object.keys(queryParams)[0]
+//   const queryValue = queryParams[queryKey]
+//   const queryResponse = await dbClient
+//     .query({
+//       TableName: TABLE_NAME!,
+//       IndexName: queryKey,
+//       KeyConditionExpression: '#zz = :zzzz',
+//       ExpressionAttributeNames: {
+//         '#zz': queryKey,
+//       },
+//       ExpressionAttributeValues: {
+//         ':zzzz': queryValue,
+//       },
+//     })
+//     .promise()
+//   return JSON.stringify(queryResponse.Items)
+// }
 
 async function queryWithSecondaryPartitionAndSortKey(
   queryParams: APIGatewayProxyEventQueryStringParameters

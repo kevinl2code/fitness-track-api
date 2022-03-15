@@ -36,7 +36,7 @@ async function handler(
           event.queryStringParameters
         )
       } else {
-        result.body = await queryWithSecondaryPartition(
+        result.body = await queryWithSecondaryPartitionAndSortKey(
           event.queryStringParameters
         )
       }
@@ -52,21 +52,46 @@ async function handler(
   return result
 }
 
-async function queryWithSecondaryPartition(
+// async function queryWithSecondaryPartition(
+//   queryParams: APIGatewayProxyEventQueryStringParameters
+// ) {
+//   const queryKey = Object.keys(queryParams)[0]
+//   const queryValue = queryParams[queryKey]
+//   const queryResponse = await dbClient
+//     .query({
+//       TableName: TABLE_NAME!,
+//       IndexName: queryKey,
+//       KeyConditionExpression: '#zz = :zzzz',
+//       ExpressionAttributeNames: {
+//         '#zz': queryKey,
+//       },
+//       ExpressionAttributeValues: {
+//         ':zzzz': queryValue,
+//       },
+//     })
+//     .promise()
+//   return JSON.stringify(queryResponse.Items)
+// }
+
+async function queryWithSecondaryPartitionAndSortKey(
   queryParams: APIGatewayProxyEventQueryStringParameters
 ) {
-  const queryKey = Object.keys(queryParams)[0]
-  const queryValue = queryParams[queryKey]
+  const primaryKey = Object.keys(queryParams)[0]
+  const sortKey = Object.keys(queryParams)[1]
+  const primaryKeyValue = queryParams[primaryKey]
+  const sortKeyValue = queryParams[sortKey]
   const queryResponse = await dbClient
     .query({
       TableName: TABLE_NAME!,
-      IndexName: queryKey,
-      KeyConditionExpression: '#zz = :zzzz',
+      IndexName: primaryKey,
+      KeyConditionExpression: '#zz = :zzzz  and #yy = :yyyy',
       ExpressionAttributeNames: {
-        '#zz': queryKey,
+        '#zz': primaryKey,
+        '#yy': sortKey,
       },
       ExpressionAttributeValues: {
-        ':zzzz': queryValue,
+        ':zzzz': primaryKeyValue,
+        ':yyyy': sortKeyValue,
       },
     })
     .promise()
