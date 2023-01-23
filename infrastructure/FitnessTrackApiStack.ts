@@ -1,4 +1,4 @@
-import { Stack, StackProps } from 'aws-cdk-lib'
+import { Fn, Stack, StackProps } from 'aws-cdk-lib'
 import {
   AuthorizationType,
   Cors,
@@ -9,10 +9,12 @@ import {
 import { Construct } from 'constructs'
 import { GenericTable } from './GenericTable'
 import { AuthorizerWrapper } from './auth/AuthorizerWrapper'
+import { WebAppDeployment } from './WebAppDeployment'
 
 export class FitnessTrackApiStack extends Stack {
   private api = new RestApi(this, 'FitnessTrackApi')
   private authorizer: AuthorizerWrapper
+  private suffix: string
 
   private fitnessTrackUsersTable = new GenericTable(this, {
     tableName: 'FitnessTrackUsersTable',
@@ -58,6 +60,9 @@ export class FitnessTrackApiStack extends Stack {
     super(scope, id, props)
 
     this.authorizer = new AuthorizerWrapper(this, this.api)
+    this.initializeSuffix()
+
+    new WebAppDeployment(this, this.suffix)
 
     const optionsWithAuthorizer: MethodOptions = {
       authorizationType: AuthorizationType.COGNITO,
@@ -99,6 +104,11 @@ export class FitnessTrackApiStack extends Stack {
       optionsWithAuthorizer
     )
 
+    // const fitnessTrackUsersCyclesResource = this.api.root.addResource(
+    //   'user/cycles',
+    //   optionsWithCors
+    // )
+
     //Foods API integrations
     const fitnessTrackFoodsResource = this.api.root.addResource(
       'foods',
@@ -124,5 +134,11 @@ export class FitnessTrackApiStack extends Stack {
       this.fitnessTrackFoodsTable.deleteLambdaIntegration,
       optionsWithAuthorizer
     )
+  }
+
+  private initializeSuffix() {
+    const shortStackId = Fn.select(2, Fn.split('/', this.stackId))
+    const Suffix = Fn.select(4, Fn.split('-', shortStackId))
+    this.suffix = Suffix
   }
 }
